@@ -72,3 +72,45 @@
 .location-area-description .editor-placeholder{width:100%;margin:0;}
 @media(max-width:680px){.location-area-item{grid-template-columns:minmax(132px,37%) minmax(0,1fr);gap:12px;padding:12px;}}
 @media(max-width:430px){.location-area-item{grid-template-columns:1fr;}.location-area-identity .location-card-media{max-width:100%;}.location-area-description{align-items:stretch;}}
+
+/* LOCATIONS — mobile three-column image cards, including single-card rows.
+   Location detail AREA cards keep their editable descriptions beneath imagery. */
+@media (max-width: 750px) {
+  .location-cards,
+  .location-area-list {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+  }
+  .location-group { padding:16px 11px; }
+  .location-card { min-width:0; padding:7px; gap:6px; }
+  .location-card .entry-code,
+  .location-area-identity .entry-code { font-size:8px; letter-spacing:.06em; }
+  .location-card h3,
+  .location-area-identity h3 {
+    font-size:clamp(.63rem,2.6vw,.88rem);
+    line-height:1.4;
+    overflow-wrap:anywhere;
+  }
+  .location-card-media-placeholder { font-size:8px; letter-spacing:.04em; }
+  .location-area-list { margin-top:14px; }
+  .location-area-item {
+    display:flex;
+    flex-direction:column;
+    min-width:0;
+    gap:7px;
+    padding:7px;
+  }
+  .location-area-identity { min-width:0; gap:6px; }
+  .location-area-identity .location-card-media { width:100%; max-width:none; }
+  .location-area-description { display:block; min-width:0; }
+  .location-area-description .editor-placeholder {
+    border-left:0;
+    border-top:1px solid var(--line-soft);
+    padding:7px 0 0;
+    background:transparent;
+    font-size:clamp(.61rem,2.35vw,.75rem);
+    line-height:1.55;
+    overflow-wrap:anywhere;
+  }
+}

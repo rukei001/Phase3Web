@@ -43,3 +43,21 @@
   }
   .character-entry-tags {display:none;}
 }
+
+/* Mobile: the four faction/department/agent/gender filters occupy two columns.
+   Search and sort retain full width for usability. */
+@media (max-width: 750px) {
+  .directory-controls { gap:9px; }
+  .directory-controls .directory-control-label { min-width:0; }
+  .directory-controls label[for="character-faction"],
+  .directory-controls label[for="character-department"],
+  .directory-controls label[for="character-agent-type"],
+  .directory-controls label[for="character-gender"] {
+    flex:0 0 calc((100% - 9px) / 2);
+    font-size:10px;
+    letter-spacing:.07em;
+  }
+  .directory-controls .directory-search,
+  .directory-controls label[for="character-sort"] { flex:0 0 100%; }
+  .directory-controls .directory-control-label select { font-size:12px; padding:8px 7px; }
+}

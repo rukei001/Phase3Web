@@ -135,3 +135,21 @@ a.department-person-identity:hover .department-person-name {color:var(--accent);
     flex:none;
   }
 }
+
+/* Mobile faction index: two cards per row, independent of the other directories. */
+@media (max-width: 750px) {
+  .faction-directory-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap:10px; }
+  .faction-directory-grid .link-card { min-width:0; min-height:164px; padding:14px 12px; }
+  .faction-directory-grid .link-card .entry-code { font-size:9px; }
+  .faction-directory-grid .link-card h2 {
+    font-size:clamp(.77rem,3.25vw,1.04rem);
+    line-height:1.4;
+    margin:15px 0 6px;
+    overflow-wrap:anywhere;
+  }
+  .faction-directory-grid .link-card p { font-size:.77rem; line-height:1.5; }
+
+  /* Department directory only: scale down chief/deputy portraits slightly. */
+  .department-chapter .roster-member-leader { width:min(26vw,104px); }
+  .department-chapter .roster-member-leader .roster-image { max-width:96px; }
+}
