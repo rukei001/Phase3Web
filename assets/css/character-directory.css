@@ -27,3 +27,19 @@
  .directory-controls {padding:13px;}
 }
 @media(prefers-reduced-motion:reduce) {.character-entry {transition:none;}}
+
+/* Mobile / DIRECTORY: four portraits per row, with metadata badges hidden. */
+@media (max-width:750px) {
+  .character-grid {
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:7px;
+  }
+  .character-entry {padding:9px 4px 10px;gap:5px;}
+  .character-entry-art {width:100%;max-width:135px;}
+  .character-entry-name {
+    font-size:clamp(.62rem,2.35vw,.79rem);
+    line-height:1.4;
+    overflow-wrap:anywhere;
+  }
+  .character-entry-tags {display:none;}
+}

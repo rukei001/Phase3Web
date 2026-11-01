@@ -225,3 +225,26 @@ dialog.gallery-lightbox::backdrop {background:rgba(2,4,8,.89);backdrop-filter:bl
 
 /* Additional A.T.A membership: its own row below the primary department. */
 .profile .profile-ata-affiliation {display:block;margin-top:8px;}
+
+/* Mobile / RELATIONSHIPS: icon and name above a full-width description.
+   Keep the original two-column layout on desktop. */
+@media (max-width:750px) {
+  .relationship-item {
+    grid-template-columns:minmax(0,1fr);
+    gap:0;
+  }
+  .relationship-target {
+    width:100%;
+    margin-bottom:16px;
+  }
+  .relationship-photo {width:min(120px,100%);}
+  .relationship-description {
+    border-top:2px solid var(--line); /* former placeholder's left border */
+    padding-top:14px;
+  }
+  .relationship-description .editor-placeholder {
+    border-left:0;
+    padding:0;
+    background:transparent;
+  }
+}

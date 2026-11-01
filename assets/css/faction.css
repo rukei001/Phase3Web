@@ -70,3 +70,68 @@ a.department-person-identity:hover .department-person-name {color:var(--accent);
 /* Research Division special appointment: clearly separated from the regular departmental roster */
 .department-acting-detail{margin-top:42px;padding:clamp(20px,3vw,32px);border:1px solid var(--line);background:var(--surface);}
 .department-acting-detail .department-person-list{margin-top:20px;}
+
+/* Mobile / DEPARTMENT DIRECTORY & DETAIL: compact four-column rosters. */
+@media (max-width:750px) {
+  /* In flex rosters, four equally sized items fit even on narrow phones. */
+  .faction-roster {gap:14px 7px;}
+  .faction-roster > .roster-member {
+    flex:0 0 calc((100% - 3 * 7px) / 4);
+  }
+  .faction-roster .roster-name {
+    font-size:clamp(.62rem,2.3vw,.8rem);
+    line-height:1.35;
+  }
+  .faction-roster .roster-image-placeholder {font-size:9px;}
+  /* CHIEF / DEPUTY remain side by side but a little smaller than before. */
+  .roster-leadership {gap:14px;}
+  .roster-member-leader {width:min(32vw,132px);max-width:44%;}
+
+  /* Department DETAIL: each person keeps one full-width card on mobile.
+     Replicate the character page's stacked identity / horizontal divider / text. */
+  .department-person-groups {display:grid;gap:28px;}
+  .department-person-group {min-width:0;width:100%;}
+  .department-person-list {grid-template-columns:minmax(0,1fr);gap:12px;}
+  .department-person-card {
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:0;
+    padding:13px;
+  }
+  .department-person-identity {
+    justify-content:center;
+    gap:9px;
+    width:100%;
+    padding-bottom:16px;
+  }
+  .department-person-photo {width:min(120px,100%);max-width:120px;}
+  .department-person-name {font-size:.82rem;line-height:1.5;}
+  .department-person-description {
+    display:block;
+    min-width:0;
+    width:100%;
+    border-top:2px solid var(--line);
+    padding-top:14px;
+    font-size:.87rem;
+    overflow-wrap:anywhere;
+  }
+  .department-person-description .editor-placeholder {
+    border-left:0;
+    padding:0;
+    background:transparent;
+  }
+
+  /* UNDER WORLD: place present/future members in four stable columns,
+     instead of centering a partial row of two. */
+  .faction-roster-underworld {
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    justify-content:stretch;
+    gap:14px 7px;
+  }
+  .faction-roster-underworld > .roster-member {
+    min-width:0;
+    width:100%;
+    flex:none;
+  }
+}

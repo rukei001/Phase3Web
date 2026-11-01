@@ -69,11 +69,41 @@
   nav.append(navInner);
   header.append(inner,nav);
   mount.replaceWith(header);
+  // iOS Safari needs a fixed body to prevent touch-scrolling the page
+  // underneath the menu. Restore the precise scroll position on close.
+  const mobileMedia = window.matchMedia('(max-width:750px)');
+  let savedScrollY = null;
+  function applyScrollLock(shouldLock) {
+    if (shouldLock && savedScrollY === null) {
+      savedScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+      document.body.style.setProperty('--menu-scroll-top', `-${savedScrollY}px`);
+      document.documentElement.classList.add('mobile-menu-open');
+    } else if (!shouldLock && savedScrollY !== null) {
+      const restoreY = savedScrollY;
+      savedScrollY = null;
+      document.documentElement.classList.remove('mobile-menu-open');
+      document.body.style.removeProperty('--menu-scroll-top');
+      window.scrollTo({top:restoreY,left:0,behavior:'instant'});
+    }
+  }
+  function syncScrollLock() {
+    applyScrollLock(!nav.hidden && mobileMedia.matches);
+  }
   function setOpen(open) {
+    // Lock before the menu expands: otherwise scroll anchoring can change
+    // scrollY by the height of the newly opened sticky navigation panel.
+    if (open) applyScrollLock(mobileMedia.matches);
     nav.hidden = !open;
+    if (open) nav.scrollTop = 0;
     button.setAttribute('aria-expanded',String(open));
     button.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');
     button.querySelector('.menu-action').textContent = open?'CLOSE':'MENU';
+    if (!open) applyScrollLock(false);
+  }
+  if (mobileMedia.addEventListener) {
+    mobileMedia.addEventListener('change', syncScrollLock);
+  } else {
+    mobileMedia.addListener(syncScrollLock);
   }
   button.addEventListener('click', () => setOpen(nav.hidden));
   document.addEventListener('keydown', e => {

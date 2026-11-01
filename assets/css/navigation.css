@@ -20,3 +20,35 @@
 .site-menu a { display:block; border-bottom:1px solid var(--line-soft); padding:12px 7px; color:var(--muted); text-decoration:none; font-size:.9rem; }
 .site-menu a:hover,.site-menu a[aria-current="page"] {color:var(--ink); background:var(--accent-soft); border-bottom-color:var(--accent); }
 @media(max-width:750px) { .site-header-inner,.site-menu-inner {width:calc(100% - 32px);} .site-header-inner {min-height:65px;} .brand-sub {display:none;} .site-menu {max-height:calc(100vh - 65px);} .site-menu-inner {grid-template-columns:1fr;gap:22px;padding:23px 0 30px;} .site-menu h2 {margin-bottom:5px;} }
+
+/* Mobile / menu open: freeze the underlying page, scroll only the menu.
+   100dvh follows browser chrome size on mobile; the extra inset keeps the
+   final DEPARTMENTS link clear of Safari/Chrome bottom UI. */
+@media (max-width:750px) {
+  html.mobile-menu-open {overflow:hidden;}
+  html.mobile-menu-open body {
+    position:fixed;
+    top:var(--menu-scroll-top,0px);
+    left:0;
+    right:0;
+    width:100%;
+    overflow:hidden;
+  }
+  html.mobile-menu-open .site-header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+  }
+  .site-menu {
+    max-height:calc(100vh - 65px); /* fallback for older mobile browsers */
+    max-height:calc(100dvh - 65px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+    touch-action:pan-y;
+  }
+  .site-menu-inner {
+    padding-bottom:calc(100px + env(safe-area-inset-bottom,0px));
+  }
+}
