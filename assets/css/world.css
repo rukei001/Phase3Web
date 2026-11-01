@@ -17,7 +17,20 @@
 .world-topic-link span:last-child {color:var(--accent);font-size:20px;line-height:1;}
 .world-topic-link:hover {border-color:var(--accent);background:var(--surface-alt);}
 .world-hub .article-section {scroll-margin-top:100px;}
-@media (max-width:500px) {.world-topic-links {grid-template-columns:1fr;}}
+/* ABOUT LIMINA: retain two equal columns on phones, even with a single link.
+   Overrides the former 500px single-column fallback. */
+@media (max-width:750px) {
+  .world-hub .world-topic-links { grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; }
+  .world-hub .world-topic-link {
+    min-width:0;
+    min-height:50px;
+    gap:5px;
+    padding:10px 8px;
+    font-size:clamp(9px,2.55vw,11px);
+    letter-spacing:0;
+  }
+  .world-hub .world-topic-link .ui-arrow { font-size:14px; }
+}
 
 /* LOCATIONS: grouped city/area links + non-clickable regional cards */
 .location-directory{display:grid;gap:28px;margin-top:30px;}
@@ -112,5 +125,29 @@
     font-size:clamp(.61rem,2.35vw,.75rem);
     line-height:1.55;
     overflow-wrap:anywhere;
+  }
+}
+
+/* IMMORTALS only: fit the section number, English title, and Japanese subtitle
+   on a single line at narrow mobile widths. All other article titles unchanged. */
+@media (max-width:750px) {
+  .immortals-content .article-section h2 {
+    flex-wrap:nowrap;
+    align-items:baseline;
+    gap:clamp(4px,1.2vw,7px);
+    font-size:clamp(.68rem,2.7vw,.93rem);
+    line-height:1.35;
+    letter-spacing:0;
+    white-space:nowrap;
+  }
+  .immortals-content .article-section h2 .section-code {
+    flex:none;
+    font-size:clamp(.59rem,2.15vw,.69rem);
+    letter-spacing:0;
+  }
+  .immortals-content .article-section h2 .section-heading-ja {
+    flex:none;
+    font-size:clamp(.53rem,1.9vw,.66rem);
+    white-space:nowrap;
   }
 }

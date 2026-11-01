@@ -226,4 +226,17 @@ a.orglink:hover {
     margin-bottom: 10px;
   }
   .portal-main .link-card .card-arrow { font-size: 17px; }
+  /* HOME: keep desktop copy inline, but always break after リミナの謎を on phones. */
+  .portal-world-caption-break { display:block; }
+  /* WORLD index only: two equal columns even if the last row has one card. */
+  .world-directory-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .world-directory-grid .link-card { min-width:0; min-height:170px; padding:15px 12px 12px; }
+  .world-directory-grid .link-card h2 {
+    font-size:clamp(.77rem,3vw,1.02rem);
+    margin:14px 0 6px;
+    letter-spacing:0;
+    overflow-wrap:anywhere;
+  }
+  .world-directory-grid .link-card p { font-size:.79rem; line-height:1.55; }
+
 }

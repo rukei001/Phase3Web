@@ -149,7 +149,19 @@ a.department-person-identity:hover .department-person-name {color:var(--accent);
   }
   .faction-directory-grid .link-card p { font-size:.77rem; line-height:1.5; }
 
-  /* Department directory only: scale down chief/deputy portraits slightly. */
-  .department-chapter .roster-member-leader { width:min(26vw,104px); }
-  .department-chapter .roster-member-leader .roster-image { max-width:96px; }
+  /* Only department directory chiefs/deputies are reduced on phones. */
+  .department-chapter .roster-leadership .roster-member-leader { width:min(26vw,104px); }
+  .department-chapter .roster-leadership .roster-member-leader .roster-image { max-width:96px; }
+}
+
+/* Department directory on PC: restore full-size chief/deputy portraits.
+   Explicit desktop breakpoint prevents mobile roster rules from shrinking them. */
+@media (min-width:751px) {
+  .department-chapter .roster-leadership .roster-member-leader {
+    width:clamp(170px,22vw,210px);
+    max-width:44%;
+  }
+  .department-chapter .roster-leadership .roster-member-leader .roster-image {
+    max-width:176px;
+  }
 }
