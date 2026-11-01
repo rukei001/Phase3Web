@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="PHASE3 設定アーカイブ：キャラクター" name="description"/>
+<title>CHARACTERS | PHASE3</title>
+<link href="../assets/css/common.css" rel="stylesheet"/>
+<link href="../assets/css/navigation.css" rel="stylesheet"/>
+<link href="../assets/css/character-directory.css" rel="stylesheet"/>
+<script defer="" src="../assets/js/navigation.js"></script>
+<script defer="" src="../assets/js/character-directory.js"></script>
+<script defer="" src="../assets/js/character-icon-data.js"></script><script defer="" src="../assets/js/character-icons.js"></script></head>
+<body>
+<div id="site-header"></div>
+<main>
+<nav aria-label="パンくずリスト" class="breadcrumb"><a href="../index.html">HOME</a><span class="separator">/</span><span aria-current="page">CHARACTER</span></nav>
+<div class="page-header page-header-compact"><div class="eyebrow">CHARACTERS / INDEX</div><h1>CHARACTERS</h1><p class="lead">とにかく多い</p></div>
+<section aria-label="Character directory and filters" class="character-directory">
+<div class="directory-controls">
+<label class="directory-control-label directory-search" for="character-query">SEARCH
+      <input autocomplete="off" id="character-query" placeholder="NAME / ALIAS" type="search"/>
+</label>
+<label class="directory-control-label" for="character-faction">DIVISION
+      <select id="character-faction"><option value="all">ALL</option><option data-tag="UN" value="un">UN</option><option data-tag="LIMINA ADMINISTRATION" value="government">Limina Administration</option><option data-tag="AG" value="alexander">Alexander Group</option><option data-tag="UW" value="underworld">UNDER WORLD</option><option data-tag="RASPLATA" value="rasplata">RASPLATA</option></select>
+</label>
+<label class="directory-control-label" for="character-department">DEPARTMENT / UNIT
+      <select id="character-department">
+<option value="all">ALL</option>
+<option data-tag="CENTRAL" value="central">CENTRAL DIVISION</option>
+<option data-tag="TACTICAL" value="tactics">TACTICAL COMMAND DIVISION</option>
+<option data-tag="EXTERNAL" value="external">EXTERNAL RELATIONS BUREAU</option>
+<option data-tag="R&amp;D" value="research">R&amp;D</option>
+<option data-tag="SYSTEMS" value="information">SYSTEMS DIVISION</option>
+<option data-tag="MEDICAL" value="medical">MEDICAL DIVISION</option>
+<option data-tag="A.T.A" value="ata">A.T.A Academy</option>
+<option data-tag="OTHERS" value="others">OTHERS</option>
+<option value="none">NONE</option>
+</select>
+</label>
+<label class="directory-control-label" for="character-agent-type">AGENT TYPE
+      <select id="character-agent-type">
+<option value="all">ALL</option>
+<option data-tag="ELITE AGENT" value="elite">ELITE AGENT</option>
+<option data-tag="AGENT" value="agent">AGENT</option>
+<option data-tag="OPERATOR" value="operator">OPERATOR</option>
+<option data-tag="NONE" value="none">NONE</option></select>
+</label>
+<label class="directory-control-label" for="character-gender">GENDER
+      <select id="character-gender">
+<option value="all">ALL</option>
+<option value="variable">VARIABLE</option>
+<option value="male">MALE</option>
+<option value="female">FEMALE</option>
+<option value="unknown">UNKNOWN</option>
+<option value="other">OTHER</option>
+</select>
+</label>
+<label class="directory-control-label" for="character-sort">SORT BY
+      <select id="character-sort">
+<option value="default">DEFAULT</option>
+<option value="name">NAME / A–Z</option>
+<option value="name-desc">NAME / Z–A</option>
+</select>
+</label>
+<div class="directory-actions">
+<button class="directory-reset" id="character-reset" type="button">CLEAR FILTERS</button>
+<p aria-live="polite" class="directory-count" id="character-count"></p>
+</div>
+</div>
+<!-- AUTHOR'S GUIDE
+    1. Assign the immutable data-character-id from data/character-production-order.json; DEFAULT sorts numerically by this ID
+    2. data-search: optional alternate names (including Japanese names)
+    3. data-factions: one or more tokens from the DIVISION options, separated by spaces
+    4. data-departments: one or more tokens from DEPARTMENT / UNIT ("none" for no affiliation)
+    5. data-agent-type: one token from AGENT TYPE; leave empty when still undecided
+    6. data-gender: variable / male / female / unknown / other
+    7. Do not create manual tags; JS creates visible tags from these attributes
+    8. Management IDs are internal metadata only. Never close gaps or reuse reserved IDs
+  -->
+<div class="character-grid" id="character-grid">
+
+<a class="character-entry" data-agent-type="agent" data-character-id="62" data-departments="external" data-factions="un" data-gender="variable" data-search="ローガン 劉樂安 Logan Lau 香港 Hong Kong" data-sort-name="LOGAN" href="logan.html">
+<span class="character-entry-art" data-character-icon="ローガン"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">LOGAN</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="" data-character-id="1000" data-departments="none" data-factions="underworld" data-gender="male" data-search="神威 カムイ Kamui UNDERWORLD" data-sort-name="KAMUI" href="kamui.html">
+<span class="character-entry-art" data-character-icon="カムイ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">KAMUI</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="" data-character-id="1001" data-departments="none" data-factions="underworld" data-gender="male" data-search="シャオバイ 小白 Xiǎobái UNDEAD キョンシー" data-sort-name="XIAOBAI" href="xiaobai.html">
+<span class="character-entry-art" data-character-icon="シャオバイ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">XIAOBAI</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+
+<a class="character-entry" data-agent-type="elite" data-character-id="01" data-departments="central" data-factions="un alexander" data-gender="variable" data-search="グレイ Gray Alexander" data-sort-name="GRAY" href="gray.html">
+<span class="character-entry-art" data-character-icon="グレイ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">GRAY</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="02" data-departments="central" data-factions="un rasplata" data-gender="variable" data-search="アズレート アナスタシア Азрето Ливинский Anastasia Livinskaya Azreto Livinsky" data-sort-name="AZRETO" href="azreto.html"><span class="character-entry-art" data-character-icon="アズレート"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">AZRETO</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="elite" data-character-id="03" data-departments="central" data-factions="un" data-gender="variable" data-search="ミシェル レティシア Michel Valmont Laetitia Langlais" data-sort-name="MICHEL" href="michel.html"><span class="character-entry-art" data-character-icon="ミシェル"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">MICHEL</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="elite" data-character-id="04" data-departments="central tactics" data-factions="un" data-gender="variable" data-search="Elizabeth Bennet Etherbert Bennet エリザベス エセルバート" data-sort-name="ELIZABETH" href="elizabeth.html">
+<span class="character-entry-art" data-character-icon="エリザベス"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">ELIZABETH</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="05" data-departments="tactics" data-factions="un" data-gender="variable" data-search="Gilbert Eberwein Gilberta Eberwein ギルベルト ギルベルタ" data-sort-name="GILBERT" href="gilbert.html">
+<span class="character-entry-art" data-character-icon="ギルベルト"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">GILBERT</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="06" data-departments="research" data-factions="un" data-gender="variable" data-search="ヴィリア ヴィットーリオ Vittorio Castiglione Vittoria Castiglione" data-sort-name="VITTORIA" href="vittoria.html"><span class="character-entry-art" data-character-icon="ヴィリア"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">VITTORIA</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="elite" data-character-id="07" data-departments="tactics" data-factions="un" data-gender="variable" data-search="天城 Amagi" data-sort-name="天城" href="amagi.html">
+<span class="character-entry-art" data-character-icon="天城"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">天城</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="08" data-departments="central" data-factions="un underworld" data-gender="variable" data-search="シェンメイ シェンウェイ 龍神美 龍神威 Lóng Shénměi Lóng Shénwēi" data-sort-name="SHENMEI" href="shenmei.html"><span class="character-entry-art" data-character-icon="シェンメイ"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">SHENMEI</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="agent" data-character-id="09" data-departments="medical" data-factions="un" data-gender="variable" data-search="Karol Weismann Kalorina Weismann カロル カロリーナ" data-sort-name="KALORINA" href="kalorina.html">
+<span class="character-entry-art" data-character-icon="カロリーナ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">KALORINA</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="11" data-departments="tactics" data-factions="un" data-gender="variable" data-search="リヴィ Oliver Kletzki" data-sort-name="LIVI" href="livi.html">
+<span class="character-entry-art" data-character-icon="リヴィ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">LIVI</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="12" data-departments="tactics" data-factions="un" data-gender="variable" data-search="メイリン バイルイ 葉美琳 葉柏睿 Yè Měilín Yè Bǎiruì BAIRUI" data-sort-name="MEILIN" href="meilin.html"><span class="character-entry-art" data-character-icon="バイルイ"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">MEILIN</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="agent" data-character-id="13" data-departments="external" data-factions="un" data-gender="variable" data-search="Alba Hernández Fernando Hernández アルバ フェルナンド" data-sort-name="ALBA" href="alba.html">
+<span class="character-entry-art" data-character-icon="アルバ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">ALBA</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="14" data-departments="research" data-factions="un" data-gender="variable" data-search="Leonor Dias Leandro Dias レオノール レアンドロ" data-sort-name="LEONOR" href="leonor.html">
+<span class="character-entry-art" data-character-icon="レオノール"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">LEONOR</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="16" data-departments="external" data-factions="un" data-gender="variable" data-search="Lee Siwoo 리･시우 シウ SIWOO" data-sort-name="SIWOO" href="siwoo.html">
+<span class="character-entry-art" data-character-icon="シウ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">SIWOO</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="17" data-departments="medical" data-factions="un" data-gender="variable" data-search="Ceciel セシル" data-sort-name="CECIEL" href="ceciel.html">
+<span class="character-entry-art" data-character-icon="セシル"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">CECIEL</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="18" data-departments="external" data-factions="un" data-gender="variable" data-search="Claire Lambert Clive Lambert クレア クライヴ" data-sort-name="CLAIRE" href="claire.html">
+<span class="character-entry-art" data-character-icon="クレア"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">CLAIRE</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="19" data-departments="external" data-factions="un" data-gender="variable" data-search="Svante Glanfelt Svea Glanfelt スヴァンテ スヴェア" data-sort-name="SVANTE" href="svante.html">
+<span class="character-entry-art" data-character-icon="スヴァンテ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">SVANTE</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="20" data-departments="external" data-factions="un" data-gender="variable" data-search="ルドヴィグ ルイース Louise Andersen" data-sort-name="LUDVIG" href="ludvig.html"><span class="character-entry-art" data-character-icon="ルドヴィグ"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">LUDVIG</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="agent" data-character-id="21" data-departments="tactics" data-factions="un" data-gender="variable" data-search="Noah Johansen Nora Johansen ノア ノラ" data-sort-name="NOAH" href="noah.html">
+<span class="character-entry-art" data-character-icon="ノア"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">NOAH</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="22" data-departments="research" data-factions="un" data-gender="variable" data-search="Raine Parviainen ライネ" data-sort-name="RAINE" href="raine.html">
+<span class="character-entry-art" data-character-icon="ライネ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">RAINE</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="24" data-departments="research" data-factions="un" data-gender="variable" data-search="Valter Vilma ヴァルテル ヴィルマ" data-sort-name="VALTER" href="valter.html">
+<span class="character-entry-art" data-character-icon="ヴァルテル"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">VALTER</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="25" data-departments="medical" data-factions="un" data-gender="variable" data-search="レオン Leon Müller" data-sort-name="LEON" href="leon.html">
+<span class="character-entry-art" data-character-icon="レオン"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">LEON</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="elite" data-character-id="26" data-departments="external" data-factions="un" data-gender="variable" data-search="Jack Wilder Jane Wilder ジャック ジェーン" data-sort-name="JACK" href="jack.html">
+<span class="character-entry-art" data-character-icon="ジャック"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">JACK</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="30" data-departments="research" data-factions="un" data-gender="variable" data-search="Ángel Ángela アンヘル アンヘラ" data-sort-name="ÁNGEL" href="angel.html">
+<span class="character-entry-art" data-character-icon="アンヘル"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">ÁNGEL</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="36" data-departments="tactics" data-factions="un" data-gender="variable" data-search="Yuriy Yuriya ユーリ ユリヤ" data-sort-name="YURIY" href="yuriy.html">
+<span class="character-entry-art" data-character-icon="ユーリ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">YURIY</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="operator" data-character-id="38" data-departments="information" data-factions="un" data-gender="variable" data-search="シグルン Sigrún Jóhannsson Sigrún Jóhannsdóttir" data-sort-name="SIGRÚN" href="sigrun.html"><span class="character-entry-art" data-character-icon="シグルン"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">SIGRÚN</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="none" data-character-id="55" data-departments="medical" data-factions="un" data-gender="variable" data-search="Flora Florian フローラ フロリアン" data-sort-name="FLORA" href="flora.html">
+<span class="character-entry-art" data-character-icon="フローラ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+<span class="character-entry-name">FLORA</span>
+<span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="15" data-departments="external" data-factions="un" data-gender="variable" data-search="アストリッド Astrid アストリッド" data-sort-name="ASTRID" href="astrid.html"><span class="character-entry-art" data-character-icon="アストリッド"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">ASTRID</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="29" data-departments="research" data-factions="un" data-gender="variable" data-search="ルクレツィア Luclezia ルクレツィア" data-sort-name="LUCLEZIA" href="luclezia.html"><span class="character-entry-art" data-character-icon="ルクレツィア"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">LUCLEZIA</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="60" data-departments="research" data-factions="un" data-gender="variable" data-search="リュディ Ljudi リュディ" data-sort-name="LJUDI" href="ljudi.html"><span class="character-entry-art" data-character-icon="リュディ"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">LJUDI</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="50" data-departments="research" data-factions="un" data-gender="variable" data-search="テウタ Teuta テウタ" data-sort-name="TEUTA" href="teuta.html"><span class="character-entry-art" data-character-icon="テウタ"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">TEUTA</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="operator" data-character-id="37" data-departments="information" data-factions="un" data-gender="variable" data-search="エステル Ester エステル" data-sort-name="ESTER" href="ester.html"><span class="character-entry-art" data-character-icon="エステル"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">ESTER</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="operator" data-character-id="31" data-departments="information" data-factions="un" data-gender="variable" data-search="リアム Liam リアム" data-sort-name="LIAM" href="liam.html"><span class="character-entry-art" data-character-icon="リアム"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">LIAM</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="49" data-departments="information" data-factions="un" data-gender="variable" data-search="ユルギス Jurgis ユルギス" data-sort-name="JURGIS" href="jurgis.html"><span class="character-entry-art" data-character-icon="ユルギス"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">JURGIS</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="operator" data-character-id="48" data-departments="information" data-factions="un" data-gender="variable" data-search="リタ Rita リタ" data-sort-name="RITA" href="rita.html"><span class="character-entry-art" data-character-icon="リタ"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">RITA</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="40" data-departments="information" data-factions="un" data-gender="variable" data-search="ゾラン Zoran ゾラン" data-sort-name="ZORAN" href="zoran.html"><span class="character-entry-art" data-character-icon="ゾラン"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">ZORAN</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="28" data-departments="information" data-factions="un" data-gender="variable" data-search="ロテム Rotem ロテム" data-sort-name="ROTEM" href="rotem.html"><span class="character-entry-art" data-character-icon="ロテム"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">ROTEM</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="32" data-departments="external" data-factions="un" data-gender="variable" data-search="Dương Dương ユオン" data-sort-name="DƯƠNG" href="duong.html"><span class="character-entry-art" data-character-icon="Dương"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">DƯƠNG</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="57" data-departments="others" data-factions="un" data-gender="variable" data-search="フェイラン Faolán Hughes フェイラン" data-sort-name="FAOLÁN" href="faolan.html"><span class="character-entry-art" data-character-icon="フェイラン"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">FAOLÁN</span><span aria-label="Attributes" class="character-entry-tags"></span></a><a class="character-entry" data-agent-type="agent" data-character-id="45" data-departments="others" data-factions="un" data-gender="variable" data-search="Mohamed Mohamed モハメド" data-sort-name="MOHAMED" href="mohamed.html"><span class="character-entry-art" data-character-icon="Mohamed"><span class="character-entry-placeholder">NO IMAGE</span></span><span class="character-entry-name">MOHAMED</span><span aria-label="Attributes" class="character-entry-tags"></span></a>
+<a class="character-entry" data-agent-type="agent" data-character-id="42" data-departments="research" data-factions="un" data-gender="variable" data-search="Вераніка Іванова Veronica Ivanova Валерый Іваноў Valery Ivanoŭ ベロニカ ヴァレリー" data-sort-name="VERONICA" href="veronica.html">
+  <span class="character-entry-art" data-character-icon="ベロニカ"><span class="character-entry-placeholder">NO IMAGE</span></span>
+  <span class="character-entry-name">VERONICA</span>
+  <span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="none" data-character-id="54" data-departments="others" data-factions="un" data-gender="male" data-search="Inunnguaq Andersen イヌング" data-sort-name="INUNNG" href="inunng.html">
+  <span class="character-entry-art" data-character-icon="イヌング"><span class="character-entry-placeholder">NO IMAGE</span></span>
+  <span class="character-entry-name">INUNNG</span>
+  <span aria-label="Attributes" class="character-entry-tags"></span>
+</a>
+<a class="character-entry" data-agent-type="agent" data-character-id="61" data-departments="medical" data-factions="un" data-gender="variable" data-search="Yixuan イーシェン" data-sort-name="YIXUAN" href="yixuan.html">
+  <span class="character-entry-art" data-character-icon="イーシェン"><span class="character-entry-placeholder">NO IMAGE</span></span>
+  <span class="character-entry-name">YIXUAN</span>
+  <span aria-label="Attributes" class="character-entry-tags"></span>
+</a></div>
+</section>
+</main>
+<footer class="site-footer"><b>PHASE3</b> // CHARACTER &amp; WORLD ARCHIVE</footer>
+</body>
+</html>

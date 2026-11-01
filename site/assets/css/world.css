@@ -1,0 +1,74 @@
+/* 世界観記事の補助スタイル。ベースは common.css */
+.world-intro {color:var(--muted);}
+.world-definition {border-top:1px solid var(--accent); padding-top:22px;}
+.world-definition dt {font-weight:700;color:var(--ink);margin-top:16px;}
+.world-definition dd {margin:5px 0 18px;color:var(--muted);}
+
+/* Organization page: department directory link */
+.organization-departments-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;margin:20px 0 0;border:1px solid var(--line);background:var(--bg-deep);text-decoration:none;transition:border-color .18s,color .18s;}
+.organization-departments-link strong{display:block;font:700 14px/1.6 var(--font-ui);letter-spacing:.13em;}
+.organization-departments-link small{display:block;font-size:.83rem;color:var(--muted);}
+.organization-departments-link > span:last-child{color:var(--accent);font-size:22px;}
+.organization-departments-link:hover{border-color:var(--accent);}
+
+/* ABOUT LIMINA: section introductions with compact topic jump links */
+.world-topic-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:22px 0 0;}
+.world-topic-link {display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px;padding:14px 17px;border:1px solid var(--line);background:var(--bg-deep);color:var(--ink);text-decoration:none;font:700 12px/1.5 var(--font-ui);letter-spacing:.07em;transition:border-color .18s,background .18s;}
+.world-topic-link span:last-child {color:var(--accent);font-size:20px;line-height:1;}
+.world-topic-link:hover {border-color:var(--accent);background:var(--surface-alt);}
+.world-hub .article-section {scroll-margin-top:100px;}
+@media (max-width:500px) {.world-topic-links {grid-template-columns:1fr;}}
+
+/* LOCATIONS: grouped city/area links + non-clickable regional cards */
+.location-directory{display:grid;gap:28px;margin-top:30px;}
+.location-group{border:1px solid var(--line);background:var(--surface);padding:22px 24px 24px;min-width:0;}
+.location-group-heading{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:18px;}
+.location-group-heading .entry-code{font-size:10px;color:var(--accent);}
+.location-group-heading h2{margin:5px 0 0;display:flex;align-items:baseline;gap:12px;font:700 clamp(1.25rem,2.4vw,1.7rem)/1.35 var(--font-ui);letter-spacing:.04em;}
+.location-group-heading a{color:var(--ink);text-decoration:none;overflow-wrap:anywhere;}
+.location-group-heading a:hover{color:var(--accent);}
+.location-heading-arrow{color:var(--accent);font-size:1.08rem;}
+.location-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.location-card{min-width:0;padding:15px;background:var(--bg-deep);border:1px solid var(--line);display:flex;flex-direction:column;gap:12px;}
+.location-card .entry-code{font-size:10px;color:var(--quiet);}
+.location-card h3{font:700 1.1rem/1.55 var(--font-ui);margin:0;overflow-wrap:anywhere;}
+/* Thumb appears even before an illustration exists: swap placeholder for an <img> later */
+.location-card-media{width:100%;aspect-ratio:16/9;background:var(--surface-alt);border:1px solid var(--line-soft);overflow:hidden;display:grid;place-items:center;}
+.location-card-media img{display:block;width:100%;height:100%;object-fit:cover;}
+.location-card-media-placeholder{font:700 10px/1.2 var(--font-ui);letter-spacing:.15em;color:var(--quiet);}
+.location-card h3{margin-top:auto;}
+.location-card-empty{border-style:dashed;}
+.location-card-empty p{color:var(--quiet);margin:0;font-size:.85rem;}
+@media(max-width:740px){.location-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.location-group{padding:18px 15px}.location-cards{gap:9px}.location-card{padding:12px}.location-card h3{font-size:.94rem}}
+@media(max-width:420px){.location-cards{grid-template-columns:1fr}}
+
+/* English section names with quiet Japanese annotations */
+.article-section h2 .section-heading-ja{font:400 .72rem/1.5 var(--font-body);letter-spacing:normal;color:var(--quiet);white-space:normal;}
+.article-toc .toc-label-ja{font:400 .72rem/1.4 var(--font-body);color:var(--quiet);margin-left:8px;}
+/* Compact table of historical events */
+.history-timeline-scroll{width:100%;max-width:100%;overflow-x:auto;}
+.history-timeline{width:100%;border-collapse:collapse;font-size:.91rem;}
+.history-timeline th,.history-timeline td{border-bottom:1px solid var(--line-soft);text-align:left;padding:12px 16px;vertical-align:top;}
+.history-timeline thead th{background:var(--bg-deep);font:700 11px/1.5 var(--font-ui);letter-spacing:.12em;color:var(--accent);}
+.history-timeline tbody th{width:134px;white-space:nowrap;font:700 .86rem/1.65 var(--font-ui);color:var(--ink);}
+.history-timeline tbody tr:hover{background:var(--bg-deep);}
+@media(max-width:500px){.history-timeline th,.history-timeline td{padding:10px 9px}.history-timeline tbody th{width:108px;font-size:.77rem}.article-section h2{flex-wrap:wrap;column-gap:10px;row-gap:4px}}
+/* Unpublished artwork slots for ABERRANTS gallery */
+.world-image-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0;}
+.world-gallery-item{min-width:0;margin:0;}
+.world-gallery-placeholder{display:grid;place-items:center;aspect-ratio:4/3;border:1px solid var(--line);background:var(--bg-deep);font:700 10px/1.3 var(--font-ui);letter-spacing:.12em;color:var(--quiet);}
+.world-gallery-item img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);}
+.world-gallery-item figcaption{font-size:.77rem;color:var(--muted);padding-top:8px;}
+@media(max-width:620px){.world-image-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* AREA section in detailed city/area pages: one region per row; visual left, editable commentary right */
+.location-area-list{display:grid;gap:12px;margin:18px 0 4px;}
+.location-area-item{display:grid;grid-template-columns:minmax(170px,35%) minmax(0,1fr);gap:20px;align-items:stretch;padding:16px;border:1px solid var(--line);background:var(--bg-deep);min-width:0;}
+.location-area-identity{display:flex;flex-direction:column;align-items:stretch;gap:10px;min-width:0;}
+.location-area-identity .entry-code{font-size:10px;color:var(--quiet);}
+.location-area-identity h3{margin:0;font:700 1.05rem/1.5 var(--font-ui);overflow-wrap:anywhere;}
+.location-area-description{min-width:0;display:flex;align-items:center;}
+.location-area-description .editor-placeholder{width:100%;margin:0;}
+@media(max-width:680px){.location-area-item{grid-template-columns:minmax(132px,37%) minmax(0,1fr);gap:12px;padding:12px;}}
+@media(max-width:430px){.location-area-item{grid-template-columns:1fr;}.location-area-identity .location-card-media{max-width:100%;}.location-area-description{align-items:stretch;}}

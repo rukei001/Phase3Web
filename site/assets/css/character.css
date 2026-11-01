@@ -1,0 +1,227 @@
+/* LIMINA / CHARACTER PAGES
+ * 共通UIの配色は common.css で一括管理。ここはキャラページ専用。
+ */
+.character-hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(270px,.8fr); gap:36px; align-items:start; }
+.character-name {font-size:clamp(1.7rem,2.8vw,2.8rem);margin:10px 0 0;}
+.character-fullname {margin:6px 0 14px; color:var(--muted); font:600 .91rem/1.7 var(--font-ui);letter-spacing:.045em;}
+.character-intro {color:var(--muted); margin:0 0 18px;}
+.character-portrait { position:relative; min-height:430px; background:linear-gradient(140deg,var(--surface-alt),var(--bg-deep)); border:1px dashed var(--line); display:flex; align-items:center; justify-content:center; text-align:center; color:var(--quiet); font:12px/1.8 var(--font-ui); letter-spacing:.13em; padding:20px; }
+.character-portrait img {display:block; width:100%; height:auto; max-height:660px; object-fit:contain;}
+.portrait-visual {width:100%;}
+.portrait-placeholder {display:grid;place-items:center;gap:6px;min-height:320px;}
+.portrait-placeholder .placeholder-icon {display:block;font-size:clamp(3rem,6vw,5rem);line-height:1;color:var(--line);}
+/* Material Symbols Outlined（male / female / arrow_drop_down） */
+.material-symbols-outlined {
+  font-family:'Material Symbols Outlined'; font-weight:normal; font-style:normal;
+  line-height:1; letter-spacing:normal; text-transform:none; white-space:nowrap;
+  display:inline-block; direction:ltr; font-feature-settings:'liga'; -webkit-font-feature-settings:'liga';
+  -webkit-font-smoothing:antialiased;
+}
+/* 画像枠の角に半分重ねる小型の性別切替ボタン（位置・大きさは調整可能） */
+.gender-toggle {
+  display:none; position:absolute; right:-12px; bottom:-12px; z-index:2;
+  width:48px; height:48px; border:1px solid var(--accent); border-radius:0;
+  background:var(--bg-deep); color:var(--ink); cursor:pointer;
+  box-shadow:0 8px 24px rgb(0 0 0 / 45%);
+  transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+}
+.genderbend-ready .gender-toggle {display:grid;place-items:center;}
+.gender-toggle .material-symbols-outlined {font-size:27px;}
+.gender-toggle:hover {background:#981b2b;color:#fff;border-color:var(--accent-hover);transform:translate(-2px,-2px);}
+.gender-toggle[aria-pressed="true"] {background:var(--surface-alt);color:var(--ink);}
+.gender-toggle:focus-visible {outline:2px solid #fff;outline-offset:3px;}
+/* 男体・女体それぞれ専用の文章があるときだけ利用 */
+[data-gender-only][hidden] {display:none !important;}
+.profile { border-collapse:collapse; width:100%; margin-top:25px; text-align:left; font-size:.9rem; }
+.profile th,.profile td {padding:12px 4px;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+.profile th {color:var(--quiet);font-weight:500;width:35%;}
+.profile a {color:var(--ink);text-decoration-color:var(--accent);}
+.profile a:hover {color:var(--accent);}
+/* セクションは標準HTMLの details/summary。本文だけを畳み、見出しは常時表示。 */
+.character-section {margin-top:22px; scroll-margin-top:105px;}
+.character-toc + .character-section {margin-top:0;}
+.character-section:not([open]) {padding-top:24px;padding-bottom:24px;}
+.character-section-summary {
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  list-style:none;cursor:pointer;user-select:none;
+}
+.character-section-summary::-webkit-details-marker {display:none;}
+.character-section-summary::marker {content:'';}
+.character-section-summary h2 {display:flex;align-items:center;gap:12px;margin:0;font-size:1.28rem;}
+.character-section-summary h2::before {content:'';width:4px;height:23px;flex:0 0 4px;background:var(--accent);}
+.section-collapse-icon {font-size:30px;color:var(--muted);transition:transform .28s cubic-bezier(.2,.75,.3,1),color .2s;}
+.character-section[open] .section-collapse-icon {transform:rotate(90deg);}
+.character-section-summary:hover .section-collapse-icon {color:var(--accent);}
+.character-section-summary:focus-visible {outline:2px solid var(--accent);outline-offset:6px;}
+.character-section-content {padding-top:25px;}
+.character-section-content > :first-child {margin-top:0;}
+.character-section-content h3 {margin:24px 0 12px;}
+.character-section-content p {margin:0 0 18px;}
+.character-section-content p:last-child {margin-bottom:0;}
+/* Preferencesは人物解説の内部に置く。プロフィールパネルには増やさない。 */
+.preference-profile {margin-top:12px;margin-bottom:25px;}
+.preference-heading {font-family:var(--font-ui);letter-spacing:.06em;}
+/* 人間関係カード。左およそ20％をキャラ画像と名前に固定。 */
+.relationship-list {display:grid;gap:16px;margin-top:28px;}
+.relationship-item {
+  display:grid;grid-template-columns:minmax(110px,20%) minmax(0,1fr);gap:25px;align-items:start;
+  padding:22px;background:var(--bg-deep);border:1px solid var(--line-soft);
+}
+.relationship-target {display:flex;flex-direction:column;align-items:center;gap:9px;text-align:center;text-decoration:none;min-width:0;}
+.relationship-photo {
+  display:block;width:100%;max-width:130px;aspect-ratio:1/1;overflow:hidden;
+  border:1px solid var(--line);border-radius:50%;background:var(--surface-alt);
+}
+.relationship-photo img {display:block;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.relationship-photo-placeholder {
+  display:grid;place-items:center;width:100%;height:100%;color:var(--quiet);
+  font:700 10px/1.5 var(--font-ui);letter-spacing:.1em;
+}
+.relationship-target-name {font-weight:700;font-size:.93rem;line-height:1.55;overflow-wrap:anywhere;}
+.relationship-target:hover .relationship-photo {border-color:var(--accent);}
+.relationship-description {min-width:0;overflow-wrap:anywhere;}
+.relationship-description p {margin:0 0 12px;}
+.relationship-description p:last-child {margin-bottom:0;}
+.character-gallery {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+.gallery-placeholder {min-height:145px;display:grid;place-items:center;text-align:center;color:var(--quiet);font:11px/1.8 var(--font-ui);letter-spacing:.12em;border:1px dashed var(--line);background:var(--bg-deep);padding:12px;}
+.character-gallery img {display:block;width:100%;height:auto;object-fit:contain;background:var(--bg-deep);border:1px solid var(--line);}
+/* GALLERY LIGHTBOX / ギャラリー画像のみ。トップ立ち絵は対象外。 */
+.gallery-lightbox-trigger {
+  display:block;width:100%;height:auto;padding:0; margin:0;
+  background:var(--bg-deep);border:1px solid var(--line);
+  color:inherit;cursor:zoom-in; text-decoration:none;
+  transition:border-color .18s ease,box-shadow .18s ease;
+}
+.gallery-lightbox-trigger img {border:0;width:100%;height:auto;display:block;}
+.gallery-lightbox-trigger:hover {border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);}
+.gallery-lightbox-trigger:focus-visible {outline:2px solid var(--accent);outline-offset:4px;}
+/* <dialog>を画面全体に広げ、背景クリックだけで閉じられる余白を確保。 */
+dialog.gallery-lightbox {
+  position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;
+  box-sizing:border-box;padding:18px;margin:0;border:0;
+  background:transparent;color:var(--ink);overflow:auto;
+}
+dialog.gallery-lightbox[open] {display:flex;align-items:center;justify-content:center;}
+dialog.gallery-lightbox::backdrop {background:rgba(2,4,8,.89);backdrop-filter:blur(3px);}
+.gallery-lightbox-panel {
+  box-sizing:border-box;position:relative;flex:0 1 auto;
+  width:max-content;max-width:min(1200px,100%);max-height:calc(100dvh - 36px);
+  overflow:auto;background:var(--bg-deep);border:1px solid var(--line);
+  box-shadow:0 18px 70px rgba(0,0,0,.7);
+  padding:16px;display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.gallery-lightbox-image {
+  display:block;width:auto;height:auto;max-width:100%;
+  max-height:calc(100dvh - 110px);object-fit:contain;
+}
+.gallery-lightbox-close {
+  position:absolute;top:8px;right:8px;z-index:1;
+  display:grid;place-items:center;width:38px;height:38px;
+  border:1px solid var(--line);background:var(--bg-deep);color:var(--ink);
+  font:26px/1 var(--font-ui);cursor:pointer;
+}
+.gallery-lightbox-close:hover {background:var(--accent);border-color:var(--accent);color:#fff;}
+.gallery-lightbox-close:focus-visible {outline:2px solid #fff;outline-offset:3px;}
+.gallery-lightbox-caption {max-width:100%;padding:0 8px;margin:0;color:var(--muted);font:12px/1.5 var(--font-ui);text-align:center;}
+.gallery-lightbox-caption:empty {display:none;}
+@media (max-width:600px) {
+  dialog.gallery-lightbox {padding:12px;}
+  .gallery-lightbox-panel {padding:10px;max-height:calc(100dvh - 24px);}
+  .gallery-lightbox-image {max-height:calc(100dvh - 94px);}
+}
+.character-toc {display:flex;flex-wrap:wrap;gap:8px;margin:30px 0;}
+.character-toc a {font:700 11px/1.5 var(--font-ui);letter-spacing:.07em;text-decoration:none;color:var(--muted);border:1px solid var(--line);padding:7px 11px;}
+.character-toc a:hover {border-color:var(--accent);color:var(--accent);}
+@media(max-width:750px) {
+  .character-hero {grid-template-columns:1fr;gap:24px;}
+  .character-portrait {min-height:300px;}
+  .relationship-item {gap:17px;padding:17px;}
+  .character-gallery {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+
+@media(max-width:460px) {
+  .relationship-item {grid-template-columns:minmax(86px,30%) minmax(0,1fr);gap:14px;padding:13px;}
+  .relationship-target-name {font-size:.82rem;}
+  .gender-toggle {width:44px;height:44px;right:-10px;bottom:-10px;}
+  .gender-toggle .material-symbols-outlined {font-size:25px;}
+  .character-section-summary h2 {font-size:1.04rem;}
+  .section-collapse-icon {font-size:28px;}
+}
+
+
+/* v17 / PROFILE: mobile layout = identity -> portrait -> table. */
+.character-details {min-width:0;}
+.character-identity {min-width:0;}
+.character-name {overflow-wrap:anywhere;}
+.profile-value-long {overflow-wrap:anywhere;}
+/* Unicode icons do not depend on an external icon-font download. */
+.gender-toggle .gender-symbol {font:700 26px/1 var(--font-ui);}
+.section-collapse-icon {font-family:var(--font-ui);font-weight:700;line-height:1;}
+@media(max-width:750px){
+  .character-hero > .character-details {display:contents;}
+  .character-hero .character-identity {order:1;}
+  .character-hero > .character-portrait {order:2;}
+  .character-hero .character-details > .profile {order:3;margin-top:0;}
+  .character-hero .character-identity .character-intro {margin-bottom:0;}
+}
+/* v17 / GENDER & ORIENTATION glossary: restrained solid underline and slightly heavier UI font. */
+.glossary-term {
+  display:inline;
+  padding:0 0 2px;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid var(--line-soft);
+  border-radius:0;
+  color:inherit;
+  font-family:var(--font-ui);
+  font-size:.99em;
+  font-weight:700;
+  letter-spacing:.025em;
+  line-height:inherit;
+  text-align:left;
+  cursor:pointer;
+  overflow-wrap:anywhere;
+}
+.glossary-term:hover,.glossary-term:focus-visible {color:var(--accent);border-bottom-color:var(--line);}
+.glossary-term:focus-visible {outline:2px solid var(--accent);outline-offset:3px;}
+.glossary-popover[hidden] {display:none!important;}
+.glossary-popover {
+  position:fixed;z-index:110;max-width:calc(100vw - 24px);
+  padding:15px 17px;border:1px solid var(--line);background:var(--bg-deep);
+  color:var(--ink);box-shadow:0 10px 32px rgb(0 0 0 / 50%);
+  font-size:.88rem;line-height:1.7;overflow-wrap:anywhere;
+}
+.glossary-popover-title {color:var(--accent);font:700 11px/1.5 var(--font-ui);letter-spacing:.1em;margin:0 0 7px;}
+.glossary-popover-description {margin:0;white-space:pre-wrap;}
+/* Relationships: only the character name links. Photo remains display-only. */
+.relationship-target-name[href] {text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;}
+.relationship-target-name[href]:hover {color:var(--accent);text-decoration-color:var(--accent);}
+.relationship-target-name[href]:focus-visible {outline:2px solid var(--accent);outline-offset:3px;}
+
+/* PROFILE: linked English label + noninteractive Japanese secondary label.
+   The clickable/hover target is English only; style follows GENDER & ORIENTATION glossary. */
+.profile .profile-reference-link {
+  display:inline; padding:0 0 2px; border-bottom:1px solid var(--line-soft);
+  color:var(--ink); text-decoration:none; font-family:var(--font-ui);
+  font-size:.99em; font-weight:700; letter-spacing:.025em; line-height:inherit;
+  overflow-wrap:anywhere;
+}
+.profile .profile-reference-link:hover,
+.profile .profile-reference-link:focus-visible {
+  color:var(--accent); border-bottom-color:var(--accent);
+}
+.profile .profile-reference-sub {
+  display:block; margin-top:3px; font-size:.84em; line-height:1.6;
+  font-weight:400; color:var(--muted);
+}
+
+/* v17.2 / Department only: normal profile font and tracking; keep English-link styling and JP sublabel. */
+.profile .profile-reference-link.profile-department-link {
+  font-family:inherit;
+  font-size:inherit;
+  letter-spacing:normal;
+  font-weight:600;
+}
+
+/* Additional A.T.A membership: its own row below the primary department. */
+.profile .profile-ata-affiliation {display:block;margin-top:8px;}

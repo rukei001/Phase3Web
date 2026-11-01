@@ -1,0 +1,390 @@
+{
+  "description": "PHASE3 production-order management IDs (fixed; gaps reserved; not public display order numbers).",
+  "slots": [
+    {
+      "id": "01",
+      "region": "US",
+      "character": "GRAY",
+      "page": "gray.html"
+    },
+    {
+      "id": "02",
+      "region": "RU",
+      "character": "AZRETO",
+      "page": "azreto.html"
+    },
+    {
+      "id": "03",
+      "region": "FR",
+      "character": "MICHEL",
+      "page": "michel.html"
+    },
+    {
+      "id": "04",
+      "region": "GB",
+      "character": "ELIZABETH",
+      "page": "elizabeth.html"
+    },
+    {
+      "id": "05",
+      "region": "DE",
+      "character": "GILBERT",
+      "page": "gilbert.html"
+    },
+    {
+      "id": "06",
+      "region": "IT",
+      "character": "VITTORIA",
+      "page": "vittoria.html"
+    },
+    {
+      "id": "07",
+      "region": "JP",
+      "character": "天城",
+      "page": "amagi.html"
+    },
+    {
+      "id": "08",
+      "region": "CN",
+      "character": "SHENMEI",
+      "page": "shenmei.html"
+    },
+    {
+      "id": "09",
+      "region": "AT",
+      "character": "KALORINA",
+      "page": "kalorina.html"
+    },
+    {
+      "id": "10",
+      "region": "TR",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "11",
+      "region": "PL",
+      "character": "LIVI",
+      "page": "livi.html"
+    },
+    {
+      "id": "12",
+      "region": "TW",
+      "character": "MEILIN",
+      "page": "meilin.html"
+    },
+    {
+      "id": "13",
+      "region": "ES",
+      "character": "ALBA",
+      "page": "alba.html"
+    },
+    {
+      "id": "14",
+      "region": "PT",
+      "character": "LEONOR",
+      "page": "leonor.html"
+    },
+    {
+      "id": "15",
+      "region": "BE",
+      "character": "ASTRID",
+      "page": "astrid.html"
+    },
+    {
+      "id": "16",
+      "region": "KR",
+      "character": "SIWOO",
+      "page": "siwoo.html"
+    },
+    {
+      "id": "17",
+      "region": "NL",
+      "character": "CECIEL",
+      "page": "ceciel.html"
+    },
+    {
+      "id": "18",
+      "region": "CA",
+      "character": "CLAIRE",
+      "page": "claire.html"
+    },
+    {
+      "id": "19",
+      "region": "SE",
+      "character": "SVANTE",
+      "page": "svante.html"
+    },
+    {
+      "id": "20",
+      "region": "DK",
+      "character": "LUDVIG",
+      "page": "ludvig.html"
+    },
+    {
+      "id": "21",
+      "region": "NO",
+      "character": "NOAH",
+      "page": "noah.html"
+    },
+    {
+      "id": "22",
+      "region": "FI",
+      "character": "RAINE",
+      "page": "raine.html"
+    },
+    {
+      "id": "23",
+      "region": "BR",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "24",
+      "region": "HU",
+      "character": "VALTER",
+      "page": "valter.html"
+    },
+    {
+      "id": "25",
+      "region": "CH",
+      "character": "LEON",
+      "page": "leon.html"
+    },
+    {
+      "id": "26",
+      "region": "AU",
+      "character": "JACK",
+      "page": "jack.html"
+    },
+    {
+      "id": "27",
+      "region": "IN",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "28",
+      "region": "IL",
+      "character": "ROTEM",
+      "page": "rotem.html"
+    },
+    {
+      "id": "29",
+      "region": "RO",
+      "character": "LUCLEZIA",
+      "page": "luclezia.html"
+    },
+    {
+      "id": "30",
+      "region": "MX",
+      "character": "ÁNGEL",
+      "page": "angel.html"
+    },
+    {
+      "id": "31",
+      "region": "NZ",
+      "character": "LIAM",
+      "page": "liam.html"
+    },
+    {
+      "id": "32",
+      "region": "VN",
+      "character": "DƯƠNG",
+      "page": "duong.html"
+    },
+    {
+      "id": "33",
+      "region": "PH",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "34",
+      "region": "MY",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "35",
+      "region": "GR",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "36",
+      "region": "UA",
+      "character": "YURIY",
+      "page": "yuriy.html"
+    },
+    {
+      "id": "37",
+      "region": "EE",
+      "character": "ESTER",
+      "page": "ester.html"
+    },
+    {
+      "id": "38",
+      "region": "IS",
+      "character": "SIGRÚN",
+      "page": "sigrun.html"
+    },
+    {
+      "id": "39",
+      "region": "KP",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "40",
+      "region": "RS",
+      "character": "ZORAN",
+      "page": "zoran.html"
+    },
+    {
+      "id": "41",
+      "region": "HR",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "42",
+      "region": "BY",
+      "character": "VERONICA",
+      "page": "veronica.html"
+    },
+    {
+      "id": "43",
+      "region": "CU",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "44",
+      "region": "IR",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "45",
+      "region": "EG",
+      "character": "MOHAMED",
+      "page": "mohamed.html"
+    },
+    {
+      "id": "46",
+      "region": "TH",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "47",
+      "region": "MN",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "48",
+      "region": "LV",
+      "character": "RITA",
+      "page": "rita.html"
+    },
+    {
+      "id": "49",
+      "region": "LT",
+      "character": "JURGIS",
+      "page": "jurgis.html"
+    },
+    {
+      "id": "50",
+      "region": "AL",
+      "character": "TEUTA",
+      "page": "teuta.html"
+    },
+    {
+      "id": "51",
+      "region": "NP",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "52",
+      "region": "KZ",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "53",
+      "region": "AQ",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "54",
+      "region": "GL",
+      "character": "INUNNG",
+      "page": "inunng.html"
+    },
+    {
+      "id": "55",
+      "region": "LI",
+      "character": "FLORA",
+      "page": "flora.html"
+    },
+    {
+      "id": "56",
+      "region": "IQ",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "57",
+      "region": "IE",
+      "character": "FAOLÁN",
+      "page": "faolan.html"
+    },
+    {
+      "id": "58",
+      "region": "XK",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "59",
+      "region": "MD",
+      "character": null,
+      "page": null
+    },
+    {
+      "id": "60",
+      "region": "BG",
+      "character": "LJUDI",
+      "page": "ljudi.html"
+    },
+    {
+      "id": "61",
+      "region": "SG",
+      "character": "YIXUAN",
+      "page": "yixuan.html"
+    },
+    {
+      "id": "62",
+      "region": "HK",
+      "character": "LOGAN",
+      "page": "logan.html"
+    },
+    {
+      "id": "1000",
+      "region": null,
+      "character": "KAMUI",
+      "page": "kamui.html",
+      "name_ja": "神威"
+    },
+    {
+      "id": "1001",
+      "region": null,
+      "character": "XIAOBAI",
+      "page": "xiaobai.html"
+    }
+  ]
+}
