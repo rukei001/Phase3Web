@@ -31,7 +31,7 @@ window.PHASE3_CHARACTER_ICONS = {
   "ユルギス": "",
   "ユーリ": "",
   "ライネ": "assets/images/icons/IconRaine.webp",
-  "リアム": "",
+  "リアム": "assets/images/icons/IconLiam.webp",
   "リタ": "",
   "リュディ": "",
   "リヴィ": "assets/images/icons/IconLivi.webp",
