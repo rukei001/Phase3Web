@@ -150,6 +150,58 @@ a.orglink:hover {
 }
 
 
+/* ========================================
+   本文装飾：キーワード強調
+   ======================================== */
+
+span.text-keyword {
+  color: var(--accent);
+  font-weight: 700;
+  padding: 0.02em 0.18em;
+  border-radius: 2px;
+}
+
+
+
+/* ========================================
+   本文装飾：重要台詞・長文強調
+   ======================================== */
+
+.text-statement {
+  color: var(--ink);
+  font-weight: 550;
+  background: rgb(255 52 74 / 16%);
+  padding: 0.03em 0.16em;
+  border-radius: 2px;
+}
+
+/* 独立装飾テキスト */
+
+.text-independent {
+  display: block;
+  color: var(--muted);
+  /* font-size: 1.08em; */
+  font-weight: 650;
+  /* line-height: 1.95;
+  letter-spacing: 0.02em; */
+
+  background: transparent;
+  /* border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line); */
+
+  padding: 0.6em 0.3em;
+  margin: 0.9em 0;
+}
+
+
+/* 本文内の空行 */
+span.text-gap {
+  display: block;
+  height: 1em;
+}
+
+
+
 /* TRIVIA 箇条書き */
 
 .trivia-list {
