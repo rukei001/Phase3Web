@@ -165,3 +165,10 @@ a.department-person-identity:hover .department-person-name {color:var(--accent);
     max-width:176px;
   }
 }
+
+/* SMOKERS: jump index uses the same portraits/grid as CHARACTER INDEX. */
+.smoker-index-section {margin:24px 0 34px;}
+.smoker-index-section h3 {font:700 13px/1.5 var(--font-ui);color:var(--accent);letter-spacing:.12em;margin:22px 0 10px;}
+.smoker-index-section .smoker-index-grid {margin:0;}
+.smoker-index-section .smoker-index-grid + h3 {margin-top:30px;}
+.smoker-details-section .department-person-card[id] {scroll-margin-top:110px;}

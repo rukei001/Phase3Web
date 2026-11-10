@@ -248,3 +248,8 @@ dialog.gallery-lightbox::backdrop {background:rgba(2,4,8,.89);backdrop-filter:bl
     background:transparent;
   }
 }
+
+/* Character-related page links: same compact cards as ABOUT LIMINA. */
+.character-related-pages {margin-top:22px;scroll-margin-top:105px;}
+.character-related-pages > h2 {display:flex;align-items:center;gap:12px;margin:0;font-size:1.28rem;}
+.character-related-pages > h2::before {content:'';width:4px;height:23px;flex:0 0 4px;background:var(--accent);}
