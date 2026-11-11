@@ -292,3 +292,20 @@ span.text-gap {
   .world-directory-grid .link-card p { font-size:.79rem; line-height:1.55; }
 
 }
+
+/* 個別ページの更新情報：必要なページだけに設置する */
+.page-update {
+  width: min(100%, 520px);
+  margin: 72px auto 0;
+  padding: 17px 22px;
+  border: 1px solid var(--line-soft);
+  background: transparent;
+  color: var(--quiet);
+  font-size: 0.82em;
+  line-height: 1.55;
+  text-align: center;
+}
+.page-update > p {
+  max-width: none;
+  margin: 0;
+}
