@@ -10,6 +10,7 @@ window.PHASE3_CHARACTER_ICONS = {
   "イーシェン": "",
   "エステル": "assets/images/icons/IconEster.webp",
   "エリザベス": "assets/images/icons/IconElizabeth.webp",
+  "エリザベス2": "assets/images/icons/IconElizabeth.webp",
   "カロリーナ": "",
   "ギルベルト": "",
   "クレア": "assets/images/icons/IconClaire.webp",
