@@ -2,6 +2,8 @@
 window.PHASE3_CHARACTER_ICONS = {
   "アストリッド": "",
   "アズレート": "assets/images/icons/IconAzreto.webp",
+  "アズレート2": "assets/images/icons/IconAzreto.webp",
+  "アイリス": "",
   "アルバ": "",
   "アンヘル": "",
   "イヌング": "assets/images/icons/IconInnu.webp",

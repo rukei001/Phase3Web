@@ -143,15 +143,15 @@
     <div class="character-portrait">
      <div class="portrait-visual" data-gender-only="female">
       <div class="portrait-placeholder">
-       女体ビジュアル
+       立ち絵1
       </div>
-      <!-- 女体立ち絵：上の placeholder を <img src="../assets/images/characters/luclezia-female.webp" alt="LUCLEZIAの立ち絵"> に差し替える -->
+      <!-- <img src="../assets/images/characters/luclezia-female.webp" alt="立ち絵1"> -->
      </div>
      <div class="portrait-visual" data-gender-only="male" hidden="">
       <div class="portrait-placeholder">
-       男体ビジュアル
+       立ち絵2
       </div>
-      <!-- 男体立ち絵：上の placeholder を <img src="../assets/images/characters/luclezia-male.webp" alt="LUCLEZIAの立ち絵"> に差し替える -->
+      <!-- <img src="../assets/images/characters/luclezia-male.webp" alt="立ち絵2"> -->
      </div>
      <button aria-label="表示している姿を切り替える" aria-pressed="false" class="gender-toggle" data-gender-toggle="" type="button">
       <span aria-hidden="true" class="gender-symbol" data-gender-symbol="">
@@ -180,6 +180,7 @@
       RELATED PAGES
     </a>
    </nav>
+
    <details class="content-panel character-section" id="personality" open="">
     <summary class="character-section-summary">
      <h2>
@@ -262,6 +263,7 @@
      <p class="editor-placeholder"></p>
     </div>
    </details>
+
    <details class="content-panel character-section" id="relationships" open="">
     <summary class="character-section-summary">
      <h2>
@@ -290,9 +292,6 @@
        </div>
       </article>
       <!--
-            【新規キャラ追加用】下の article 一式をコメントの外にコピーして編集する。
-            data-character-icon は character-icon-data.js の登録キーに合わせる。
-            相手のページが未実装の場合は、名前の a タグを span タグに変更する。
 
             <article class="relationship-item">
               <div class="relationship-target">
@@ -302,13 +301,14 @@
                 <a class="relationship-target-name" href="【相手ページのファイル名】.html">【相手の表示名】</a>
               </div>
               <div class="relationship-description">
-                <p class="editor-placeholder">【作者執筆欄】相手との関係性の説明</p>
+                <p class="editor-placeholder"></p>
               </div>
             </article>
             -->
      </div>
     </div>
    </details>
+
    <details class="content-panel character-section" id="agent-status" open="">
     <summary class="character-section-summary">
      <h2>
@@ -350,6 +350,7 @@
      <p class="editor-placeholder"></p>
     </div>
    </details>
+
    <details class="content-panel character-section" id="trivia" open="">
     <summary class="character-section-summary">
      <h2>
@@ -363,13 +364,17 @@
      <div class="editor-placeholder">
        <ul class="trivia-list">
          <!--
-         <li>トリビア1つ目を記入</li>
-         <li>トリビア2つ目を記入</li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
          -->
        </ul>
      </div>
     </div>
    </details>
+
    <details class="content-panel character-section" id="gallery" open="">
     <summary class="character-section-summary">
      <h2>
@@ -393,16 +398,18 @@
      </div>
     </div>
    </details>
+
   <section class="content-panel character-related-pages world-hub" id="related-pages" aria-labelledby="luclezia-related-title">
     <h2 id="luclezia-related-title">RELATED PAGES</h2>
     <nav class="world-topic-links" aria-label="関連ページ">
       <a class="world-topic-link" href="../departments/research.html"><span>Research &amp; Development Division</span><span class="ui-arrow" aria-hidden="true"></span></a>
       <a class="world-topic-link" href="../departments/smokers.html"><span>SMOKERS</span><span class="ui-arrow" aria-hidden="true"></span></a>
-      <!-- 必要に応じて、この位置に関連ページへのリンクを追加 -->
+
     </nav>
   </section>
 
   </main>
+
   <footer class="site-footer">
    <b>
     PHASE3

@@ -385,6 +385,13 @@
       "region": null,
       "character": "XIAOBAI",
       "page": "xiaobai.html"
+    },
+    {
+      "id": "1002",
+      "region": null,
+      "character": "IRIS",
+      "page": "iris.html",
+      "name_ja": "アイリス"
     }
   ]
 }
