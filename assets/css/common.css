@@ -309,3 +309,15 @@ span.text-gap {
   max-width: none;
   margin: 0;
 }
+
+
+/* HOME: EPISODE追加後の4カードを均等に配置する。 */
+@media (min-width: 901px) {
+  .portal-directory .card-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 751px) and (max-width: 900px) {
+  .portal-directory .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 750px) {
+  .portal-main .portal-directory .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

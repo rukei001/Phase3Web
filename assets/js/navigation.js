@@ -10,6 +10,7 @@
       ['HOME', 'index.html'],
       ['WORLD/世界観', 'world/index.html'],
       ['DIVISION/陣営', 'factions/index.html'],
+      ['EPISODE', 'episodes/index.html'],
       ['CHARACTER', 'characters/index.html']
     ] },
     { label: '02 / WORLD ARCHIVE', links: [

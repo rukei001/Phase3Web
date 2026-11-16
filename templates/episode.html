@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PHASE3Website" />
+  <title>EPISODE TITLE | PHASE3</title>
+  <link rel="stylesheet" href="../assets/css/common.css" />
+  <link rel="stylesheet" href="../assets/css/navigation.css" />
+  <link rel="stylesheet" href="../assets/css/episode.css" />
+  <script defer src="../assets/js/navigation.js"></script>
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="episode-reading-main">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">HOME</a>
+      <span class="separator">/</span>
+      <a href="../episodes/index.html">EPISODE</a>
+      <span class="separator">/</span>
+      <span aria-current="page">EPISODE TITLE</span>
+    </nav>
+
+    <article class="episode-article">
+      <header class="episode-article-header">
+        <div class="eyebrow">EPISODE / SHORT STORY</div>
+        <h1>エピソードタイトル</h1>
+        <p class="episode-subtitle"></p>
+        <div class="episode-meta">
+          <!-- ここは登録する人物ごとにHTMLファイル名・表示名を書き換える。 -->
+          <span>MAIN CHARACTER / <strong><a href="../characters/noah.html">NOAH</a></strong></span>
+          <span>CAST / <a href="../characters/noah.html">NOAH</a></span>
+        </div>
+      </header>
+
+      <!-- 画像登録時はplaceholderを削除して、下のfigureのコメントを外す。 -->
+      <figure class="episode-hero-placeholder" aria-label="エピソード画像の仮置き領域">
+        <span>EPISODE IMAGE</span>
+        <small>16:9 / 画像未登録</small>
+      </figure>
+      <!--
+      <figure class="episode-hero-image">
+        <img src="../assets/images/episodes/episode-image.webp" alt="エピソード用イラスト" />
+        <figcaption></figcaption>
+      </figure>
+      -->
+
+      <!-- エピソード本文：ここから記入。場面転換には h2 を使用。 -->
+      <div class="episode-body">
+        <p></p>
+
+        <!--
+        <h2>大区分・章見出し</h2>
+        <p></p>
+
+        <h2>場面転換の見出し</h2>
+        <p></p>
+        -->
+      </div>
+
+      <div class="episode-ending">END OF EPISODE</div>
+
+      <!-- 必要な場合は、登場キャラの個別ページへのリンクを記入する。 -->
+      <section class="episode-related" aria-labelledby="episode-related-heading">
+        <h2 id="episode-related-heading">RELATED CHARACTERS</h2>
+        <nav class="episode-related-links" aria-label="登場キャラクター">
+          <!-- <a href="../characters/livi.html">LIVI</a> -->
+        </nav>
+      </section>
+
+      <nav class="episode-back" aria-label="エピソード一覧へ戻る">
+        <a href="../episodes/index.html">← EPISODE INDEX</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer"><b>PHASE3</b> // CHARACTER &amp; WORLD ARCHIVE</footer>
+</body>
+</html>
