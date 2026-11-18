@@ -43,7 +43,7 @@ window.PHASE3_CHARACTER_ICONS = {
   "レオノール": "",
   "レオン": "assets/images/icons/IconLeon.webp",
   "ロテム": "assets/images/icons/IconRotem.webp",
-  "ヴァルテル": "",
+  "ヴァルテル": "assets/images/icons/IconValter.webp",
   "ヴィリア": "assets/images/icons/IconVittoria.webp",
   "天城": "assets/images/icons/IconAmagi.webp",
   "ローガン": "",
