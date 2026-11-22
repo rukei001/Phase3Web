@@ -151,3 +151,41 @@
     white-space:nowrap;
   }
 }
+
+
+/* IMMORTALS / GENDER: long-form text and expandable supplementary columns */
+.gender-article-prose p { max-width:none; }
+.gender-article-prose p:last-child { margin-bottom:0; }
+.gender-article-prose p + p { margin-top:1em; }
+.world-column {
+  margin:24px 0 2px;
+  border:1px solid var(--line);
+  background:var(--bg-deep);
+}
+.world-column-title {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  min-height:70px;
+  padding:14px 18px;
+  cursor:pointer;
+  list-style:none;
+}
+.world-column-title::-webkit-details-marker { display:none; }
+.world-column-title::before { content:''; background:var(--accent); width:3px; align-self:stretch; flex:none; }
+.world-column-heading { display:flex; flex:1; flex-direction:column; gap:3px; min-width:0; }
+.world-column-label { color:var(--quiet); font:700 10px/1.5 var(--font-ui); letter-spacing:.18em; }
+.world-column-name { color:var(--ink); font-size:.95rem; font-weight:650; line-height:1.6; }
+.world-column-chevron { flex:none; display:block; width:9px; height:9px; border-right:1.5px solid var(--muted); border-bottom:1.5px solid var(--muted); transform:rotate(45deg); transition:transform .18s; }
+.world-column[open] .world-column-chevron { transform:rotate(225deg); }
+.world-column-title:hover .world-column-name { color:var(--accent); }
+.world-column-title:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.world-column-body { border-top:1px solid var(--line-soft); padding:18px 22px 20px; color:var(--muted); font-size:.94rem; line-height:1.9; }
+.world-column-body p { max-width:none; margin:0; }
+.world-column-body p + p { margin-top:1.1em; }
+@media (max-width:620px) {
+  .world-column-title { padding:12px 14px; gap:12px; }
+  .world-column-body { padding:15px 16px 18px; }
+  .gender-of-immortals .article-section h2 { column-gap:8px; row-gap:5px; }
+}
