@@ -9,7 +9,7 @@
     { label: '01 / MAIN DIRECTORY', links: [
       ['HOME', 'index.html'],
       ['WORLD/世界観', 'world/index.html'],
-      ['DIVISION/陣営', 'factions/index.html'],
+      ['DIVISION/陣営', 'division/index.html'],
       ['EPISODE', 'episodes/index.html'],
       ['CHARACTER', 'characters/index.html']
     ] },
@@ -21,8 +21,8 @@
       ['CULTURE/社会・文化', 'world/culture.html']
     ] },
     { label: '03 / UN', links: [
-      ['UN/異形討伐機構', 'world/organization.html'],
-      ['ABERRANTS/異形', 'world/anomalies.html'],
+      ['UN/異形討伐機構', 'world/UN.html'],
+      ['ABERRANTS/異形', 'world/aberrants.html'],
       ['IMMORTALS/不死者', 'world/immortals.html'],
       ['DEPARTMENTS/所属部門', 'departments/index.html']
     ] }
